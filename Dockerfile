@@ -15,7 +15,7 @@ FROM openjdk:17.0-slim
 WORKDIR /app
 
 # 빌더 이미지에서 jar 파일만 복사
-COPY --from=builder /build/libs/*-SNAPSHOT.jar ./app.jar
+COPY --from=builder /build/build/libs/*-SNAPSHOT.jar ./app.jar
 
 EXPOSE 8080
 
